@@ -1,0 +1,16 @@
+# Ignore node_modules for both frontend and server
+/Front/node_modules
+
+# Ignore environment variables
+/frontend/.env
+/server/.env
+
+# Ignore build or dist folders (if any)
+/Front/build
+
+# Ignore log files
+*.log
+
+# Ignore any specific IDE or editor files
+.vscode/
+.idea/
