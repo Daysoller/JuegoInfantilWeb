@@ -19,3 +19,10 @@ Asegúrate de tener lo siguiente instalado en tu máquina:
 2. **npm** (Node Package Manager): Debería instalarse junto con Node.js. Puedes comprobar que está instalado con el siguiente comando:
    ```bash
    npm -v
+Este proyecto está bajo licencia **Creative Commons BY-NC 4.0**. En resumen:
+
+- Puedes usarlo para fines personales y educativos.
+- No se permite su uso con fines comerciales.
+- Siempre debes dar crédito al autor: Tomas Palazuelos.
+
+Para más información, revisa los [detalles de la licencia](LICENSE.md).
