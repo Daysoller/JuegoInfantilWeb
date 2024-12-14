@@ -46,19 +46,19 @@ const Home = () => {
           <div className="mt-4 flex justify-center items-center gap-4">
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Ciervo.jpg"
-                soundAnimal="/sounds/Venado.mp3"
+                imageAnimal="public/ciervo.jpg"
+                soundAnimal="public/sounds/venado.mp3"
               />
             </div>
 
             <InteractiveBtn
-              imageAnimal="/Fox.jpg"
-              soundAnimal="/sounds/Fox.mp3"
+              imageAnimal="public/fox.jpg"
+              soundAnimal="public/sounds/fox.mp3"
             />
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Elephant.jpg"
-                soundAnimal="/sounds/Elefante.mp3"
+                imageAnimal="public/elephant.jpg"
+                soundAnimal="public/sounds/elefante.mp3"
               />
             </div>
           </div>
@@ -76,20 +76,20 @@ const Home = () => {
           <div className="mt-4 flex justify-center items-center gap-4">
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Cat.jpg"
-                soundAnimal="/sounds/cat.wav"
+                imageAnimal="public/cat.jpg"
+                soundAnimal="public/sounds/cat.wav"
               />
             </div>
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Coyote.jpg"
-                soundAnimal="/sounds/Coyote.mp3"
+                imageAnimal="public/coyote.jpg"
+                soundAnimal="public/sounds/coyote.mp3"
               />
             </div>
 
             <InteractiveBtn
-              imageAnimal="/Rino.jpg"
-              soundAnimal="/sounds/Rinoceronte.mp3"
+              imageAnimal="public/rino.jpg"
+              soundAnimal="public/sounds/rinoceronte.mp3"
             />
           </div>
           <label className="text-yellow-300 text-3xl font-bold">
@@ -105,19 +105,19 @@ const Home = () => {
           </div>
           <div className="mt-4 flex justify-center items-center gap-4">
             <InteractiveBtn
-              imageAnimal="/Dog.png"
-              soundAnimal="/sounds/Dog.mp3"
+              imageAnimal="public/dog.png"
+              soundAnimal="public/sounds/dog.mp3"
             />
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Jiraff.jpg"
-                soundAnimal="/sounds/Jirafa.mp3"
+                imageAnimal="public/jiraff.jpg"
+                soundAnimal="public/sounds/jirafa.mp3"
               />
             </div>
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Lion.jpg"
-                soundAnimal="/sounds/Leon.mp3"
+                imageAnimal="public/lion.jpg"
+                soundAnimal="public/sounds/leon.mp3"
               />
             </div>
           </div>
@@ -135,19 +135,19 @@ const Home = () => {
           <div className="mt-4 flex justify-center items-center gap-4">
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Lince.jpg"
-                soundAnimal="/sounds/Linx.mp3"
+                imageAnimal="public/lince.jpg"
+                soundAnimal="public/sounds/linx.mp3"
               />
             </div>
 
             <InteractiveBtn
-              imageAnimal="/Wolf.jpg"
-              soundAnimal="/sounds/Lobo.mp3"
+              imageAnimal="public/wolf.jpg"
+              soundAnimal="public/sounds/lobo.mp3"
             />
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Rino.jpg"
-                soundAnimal="/sounds/Rinoceronte.mp3"
+                imageAnimal="public/rino.jpg"
+                soundAnimal="public/sounds/rinoceronte.mp3"
               />
             </div>
           </div>
@@ -164,19 +164,19 @@ const Home = () => {
           </div>
           <div className="mt-4 flex justify-center items-center gap-4">
             <InteractiveBtn
-              imageAnimal="/Caballo.jpg"
-              soundAnimal="/sounds/Caballo.mp3"
+              imageAnimal="public/caballo.jpg"
+              soundAnimal="public/sounds/caballo.mp3"
             />
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Fox.jpg"
-                soundAnimal="/sounds/Fox.mp3"
+                imageAnimal="public/fox.jpg"
+                soundAnimal="public/sounds/fox.mp3"
               />
             </div>
             <div>
               <InteractiveBtn
-                imageAnimal="/Elephant.jpg"
-                soundAnimal="/sounds/Elefante.mp3"
+                imageAnimal="public/elephant.jpg"
+                soundAnimal="public/sounds/elefante.mp3"
               />
             </div>
           </div>
@@ -193,19 +193,19 @@ const Home = () => {
           </div>
           <div className="mt-4 flex justify-center items-center gap-4">
             <InteractiveBtn
-              imageAnimal="/Cuervo.png"
-              soundAnimal="/sounds/Cuervo.mp3"
+              imageAnimal="public/cuervo.png"
+              soundAnimal="public/sounds/cuervo.mp3"
             />
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Dog.png"
-                soundAnimal="/sounds/Dog.mp3"
+                imageAnimal="public/dog.png"
+                soundAnimal="public/sounds/dog.mp3"
               />
             </div>
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Rino.jpg"
-                soundAnimal="/sounds/Rinoceronte.mp3"
+                imageAnimal="public/rino.jpg"
+                soundAnimal="public/sounds/rinoceronte.mp3"
               />
             </div>
           </div>
@@ -222,19 +222,19 @@ const Home = () => {
           </div>
           <div className="mt-4 flex justify-center items-center gap-4">
             <InteractiveBtn
-              imageAnimal="/Coyote.jpg"
-              soundAnimal="/sounds/Coyote.mp3"
+              imageAnimal="public/coyote.jpg"
+              soundAnimal="public/sounds/coyote.mp3"
             />
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Cat.jpg"
-                soundAnimal="/sounds/cat.wav"
+                imageAnimal="public/cat.jpg"
+                soundAnimal="public/sounds/cat.wav"
               />
             </div>
             <div onClick={HandleClick}>
               <InteractiveBtn
-                imageAnimal="/Lince.jpg"
-                soundAnimal="/sounds/Linx.mp3"
+                imageAnimal="public/lince.jpg"
+                soundAnimal="public/sounds/linx.mp3"
               />
             </div>
           </div>
