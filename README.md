@@ -1,6 +1,6 @@
 # ProyectoWeb
 
-Este es un proyecto web interactivo hecho con **React** que está orientado a [especificar el propósito de tu proyecto aquí, por ejemplo: "un juego educativo para niños"]. El proyecto utiliza **React Router DOM** para la navegación y **TailwindCSS** para los estilos.
+Este es un proyecto web interactivo hecho con **React** que está orientado a [especificar el propósito de tu proyecto aquí, por ejemplo: "un juego educativo para niños". El proyecto utiliza **React Router DOM** para la navegación y **TailwindCSS** para los estilos.
 
 ## Tecnologías Utilizadas
 
