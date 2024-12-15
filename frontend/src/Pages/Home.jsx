@@ -82,7 +82,7 @@ const AnimalGroup = ({ count, onCorrectAnimal, onClickAnimal, points }) => {
     { name: "Zorro", image: "Fox.jpg", sound: "sounds/Fox.mp3" },
     { name: "Elefante", image: "Elephant.jpg", sound: "sounds/Elefante.mp3" },
     { name: "Perro", image: "Dog.png", sound: "sounds/Dog.mp3" },
-    { name: "Gato", image: "cat.jpg", sound: "sounds/cat.wav" },
+    { name: "Gato", image: "Cat.jpg", sound: "sounds/cat.wav" },
     { name: "León", image: "Lion.jpg", sound: "sounds/Leon.mp3" },
     { name: "Lobo", image: "Wolf.jpg", sound: "sounds/Lobo.mp3" },
   ];
