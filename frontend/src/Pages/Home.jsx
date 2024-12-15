@@ -66,7 +66,7 @@ export default Home;
 const GameOverModal = ({ resetGame }) => (
   <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div className="bg-white p-6 rounded-lg shadow-lg">
-      <h1 className="text-3xl font-bold text-red-600 mb-4">Juego Terminado!</h1>
+      <h1 className="text-3xl font-bold text-red-500 mb-4">Juego Terminado!</h1>
       <button
         className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
         onClick={resetGame}
