@@ -10,6 +10,7 @@ const Home = () => {
     points > 1 ? setPoints(points - 1) : isOpen(true) && setPoints(0);
     count < 7 ? setCount(count + 1) : isOpen(true);
   };
+
   const ResetBtn = () => {
     setPoints(7);
     setCount(0);
@@ -18,276 +19,100 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-screen w-full max-w-screen overflow-x-hidden">
       {Open && <GameOverModal resetGame={ResetBtn} />}
 
-      <div className=" bg-blue-400 flex justify-start">
+      <header className="bg-blue-400 p-4 flex justify-between items-center">
         <img
           onClick={ResetBtn}
-          className="mr-72 ml-6 mt-8 w-14 h-14 cursor-pointer"
+          className="w-12 h-12 cursor-pointer"
           src="reset.png"
           alt="Reset"
         />
-        <p className="bg-blue-400  text-2xl font-normal text-yellow-200 p-4">
-          Bienvenido!
-          <span className="mx-2 text-violet-700 font-extrabold">Da clic</span> a
-          una de las
-          <span className="text-orange-300 mx-2 font-bold">imágenes</span> de
+        <p className="text-lg sm:text-xl md:text-2xl text-yellow-200 font-medium">
+          Bienvenido!{" "}
+          <span className="text-violet-700 font-bold">Da clic</span> a una de
+          las <span className="text-orange-300 font-bold">imágenes</span> de
           abajo y diviértete.
         </p>
-      </div>
+      </header>
 
-      <div className="bg-blue-400 flex flex-col justify-center items-center gap-6">
-        <div className="flex justify-center items-center gap-4">
-          <div className="bg-yellow-600 text-slate-100 p-4 rounded-lg text-center">
-            Haz <span className="font-extrabold">click</span> en el
-            <span className="font-bold mx-1">Zorro!</span>
-          </div>
-          <div className="mt-4 flex justify-center items-center gap-4">
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/ciervo.jpg"
-                soundAnimal="/sounds/venado.mp3"
-              />
-            </div>
-
-            <InteractiveBtn
-              imageAnimal="/fox.jpg"
-              soundAnimal="/sounds/fox.mp3"
-            />
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/elephant.jpg"
-                soundAnimal="/sounds/elefante.mp3"
-              />
-            </div>
-          </div>
-          <label className="text-yellow-300 text-3xl font-bold">
-            {points}/7
-          </label>
-        </div>
-      </div>
-      <div className="bg-blue-400 flex flex-col justify-center items-center gap-6">
-        <div className="flex justify-center items-center gap-4">
-          <div className="bg-yellow-600 text-slate-100 p-4 rounded-lg text-center">
-            Haz <span className="font-extrabold">click</span> en el
-            <span className="font-bold mx-1">Rino!</span>
-          </div>
-          <div className="mt-4 flex justify-center items-center gap-4">
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/cat.jpg"
-                soundAnimal="/sounds/cat.wav"
-              />
-            </div>
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/coyote.jpg"
-                soundAnimal="/sounds/coyote.mp3"
-              />
-            </div>
-
-            <InteractiveBtn
-              imageAnimal="/rino.jpg"
-              soundAnimal="/sounds/rinoceronte.mp3"
-            />
-          </div>
-          <label className="text-yellow-300 text-3xl font-bold">
-            {points}/7
-          </label>
-        </div>
-      </div>
-      <div className="bg-blue-400 flex flex-col justify-center items-center gap-6">
-        <div className="flex justify-center items-center gap-4">
-          <div className="bg-yellow-600 text-slate-100 p-4 rounded-lg text-center">
-            Haz <span className="font-extrabold">click</span> en el
-            <span className="font-bold mx-1">Perro!</span>
-          </div>
-          <div className="mt-4 flex justify-center items-center gap-4">
-            <InteractiveBtn
-              imageAnimal="/dog.png"
-              soundAnimal="/sounds/dog.mp3"
-            />
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/jiraff.jpg"
-                soundAnimal="/sounds/jirafa.mp3"
-              />
-            </div>
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/lion.jpg"
-                soundAnimal="/sounds/leon.mp3"
-              />
-            </div>
-          </div>
-          <label className="text-yellow-300 text-3xl font-bold">
-            {points}/7
-          </label>
-        </div>
-      </div>
-      <div className="bg-blue-400 flex flex-col justify-center items-center gap-6">
-        <div className="flex justify-center items-center gap-4">
-          <div className="bg-yellow-600 text-slate-100 p-4 rounded-lg text-center">
-            Haz <span className="font-extrabold">click</span> en el
-            <span className="font-bold mx-1">lobo!</span>
-          </div>
-          <div className="mt-4 flex justify-center items-center gap-4">
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/lince.jpg"
-                soundAnimal="/sounds/linx.mp3"
-              />
-            </div>
-
-            <InteractiveBtn
-              imageAnimal="/wolf.jpg"
-              soundAnimal="/sounds/lobo.mp3"
-            />
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/rino.jpg"
-                soundAnimal="/sounds/rinoceronte.mp3"
-              />
-            </div>
-          </div>
-          <label className="text-yellow-300 text-3xl font-bold">
-            {points}/7
-          </label>
-        </div>
-      </div>
-      <div className="bg-blue-400 flex flex-col justify-center items-center gap-6">
-        <div className="flex justify-center items-center gap-4">
-          <div className="bg-yellow-600 text-slate-100 p-4 rounded-lg text-center">
-            Haz <span className="font-extrabold">click</span> en el
-            <span className="font-bold mx-1">Caballo!</span>
-          </div>
-          <div className="mt-4 flex justify-center items-center gap-4">
-            <InteractiveBtn
-              imageAnimal="/caballo.jpg"
-              soundAnimal="/sounds/caballo.mp3"
-            />
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/fox.jpg"
-                soundAnimal="/sounds/fox.mp3"
-              />
-            </div>
-            <div>
-              <InteractiveBtn
-                imageAnimal="/elephant.jpg"
-                soundAnimal="/sounds/elefante.mp3"
-              />
-            </div>
-          </div>
-          <label className="text-yellow-300 text-3xl font-bold">
-            {points}/7
-          </label>
-        </div>
-      </div>
-      <div className="bg-blue-400 flex flex-col justify-center items-center gap-6">
-        <div className="flex justify-center items-center gap-4">
-          <div className="bg-yellow-600 text-slate-100 p-4 rounded-lg text-center">
-            Haz <span className="font-extrabold">click</span> en el
-            <span className="font-bold mx-1">cuervo!</span>
-          </div>
-          <div className="mt-4 flex justify-center items-center gap-4">
-            <InteractiveBtn
-              imageAnimal="/cuervo.png"
-              soundAnimal="/sounds/cuervo.mp3"
-            />
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/dog.png"
-                soundAnimal="/sounds/dog.mp3"
-              />
-            </div>
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/rino.jpg"
-                soundAnimal="/sounds/rinoceronte.mp3"
-              />
-            </div>
-          </div>
-          <label className="text-yellow-300 text-3xl font-bold">
-            {points}/7
-          </label>
-        </div>
-      </div>
-      <div className="bg-blue-400 flex flex-col justify-center items-center gap-6">
-        <div className="flex justify-center items-center gap-4">
-          <div className="bg-yellow-600 text-slate-100 p-4 rounded-lg text-center">
-            Haz <span className="font-extrabold">click</span> en el
-            <span className="font-bold mx-1">coyote!</span>
-          </div>
-          <div className="mt-4 flex justify-center items-center gap-4">
-            <InteractiveBtn
-              imageAnimal="/coyote.jpg"
-              soundAnimal="/sounds/coyote.mp3"
-            />
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/cat.jpg"
-                soundAnimal="/sounds/cat.wav"
-              />
-            </div>
-            <div onClick={HandleClick}>
-              <InteractiveBtn
-                imageAnimal="/lince.jpg"
-                soundAnimal="/sounds/linx.mp3"
-              />
-            </div>
-          </div>
-          <label className="text-yellow-300 text-3xl font-bold">
-            {points}/7
-          </label>
-        </div>
-      </div>
+      <main className="bg-blue-400 flex flex-wrap justify-center items-start gap-8 p-4">
+        {/** Grupos de animales */}
+        {[1, 2, 3, 4, 5, 6].map((group, index) => (
+          <AnimalGroup key={index} group={group} points={points} onClick={HandleClick} />
+        ))}
+      </main>
     </div>
   );
 };
 
 export default Home;
 
-// eslint-disable-next-line react/prop-types
-const GameOverModal = ({ resetGame }) => {
+const GameOverModal = ({ resetGame }) => (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white p-6 rounded-lg shadow-lg">
+      <h1 className="text-3xl font-bold text-red-600 mb-4">¡Juego Terminado!</h1>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+        onClick={resetGame}
+      >
+        Reiniciar Juego
+      </button>
+    </div>
+  </div>
+);
+
+const AnimalGroup = ({ group, points, onClick }) => {
+  const animals = [
+    { name: "Zorro", image: "/fox.jpg", sound: "/sounds/fox.mp3" },
+    { name: "Elefante", image: "/elephant.jpg", sound: "/sounds/elefante.mp3" },
+    { name: "Perro", image: "/dog.png", sound: "/sounds/dog.mp3" },
+  ];
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-red-600 mb-4">
-          ¡Juego Terminado!
-        </h1>
-        <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-          onClick={resetGame}
-        >
-          Reiniciar Juego
-        </button>
+    <div className="flex flex-col gap-4 bg-blue-200 p-4 rounded-lg shadow-md max-w-xs w-full sm:w-auto">
+      <h2 className="text-yellow-600 font-bold text-lg sm:text-xl">
+        Haz click en el {animals[group % animals.length].name}!
+      </h2>
+      <div className="flex flex-wrap justify-center gap-4">
+        {animals.map((animal, index) => (
+          <InteractiveBtn
+            key={index}
+            imageAnimal={animal.image}
+            soundAnimal={animal.sound}
+            onClick={onClick}
+          />
+        ))}
       </div>
+      <p className="text-yellow-400 font-bold text-lg sm:text-2xl">
+        {points}/7
+      </p>
     </div>
   );
 };
-// eslint-disable-next-line react/prop-types
-function InteractiveBtn({ imageAnimal, soundAnimal }) {
+
+const InteractiveBtn = ({ imageAnimal, soundAnimal, onClick }) => {
   const [isActive, setActive] = useState(false);
 
   const playSound = () => {
     const audio = new Audio(soundAnimal);
     audio.play();
   };
+
   const toggleButton = () => {
     setActive(!isActive);
     !isActive && playSound();
+    onClick && onClick();
   };
 
   return (
-    <div className="bg-slate-300 p-2 rounded-lg">
+    <div className="p-2 rounded-lg bg-slate-300 hover:bg-slate-400">
       <img
-        style={{ width: "10rem", height: "10rem", objectFit: "cover" }}
-        className={`transition-all duration-300 transform ${
+        className={`w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg transition-all duration-300 ${
           isActive
-            ? "grayscale-0 scale-110 brightness-125"
-            : "grayscale hover:scale-110"
+            ? "scale-110 brightness-125"
+            : "grayscale hover:scale-105 hover:grayscale-0"
         }`}
         onClick={toggleButton}
         src={imageAnimal}
@@ -295,4 +120,5 @@ function InteractiveBtn({ imageAnimal, soundAnimal }) {
       />
     </div>
   );
-}
+};
+          
