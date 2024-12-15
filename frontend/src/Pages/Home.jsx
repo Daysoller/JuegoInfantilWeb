@@ -4,16 +4,19 @@ const Home = () => {
   const [points, setPoints] = useState(7);
   const [count, setCount] = useState(0);
   const [Open, isOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messageColor, setMessageColor] = useState("");
 
   const [currentAnimal, setCurrentAnimal] = useState(null);
 
-  // Función para verificar si el animal es correcto
   const HandleClick = (clickedAnimal) => {
     if (clickedAnimal === currentAnimal) {
-      console.log("Correcto!");
+      setMessage("¡Correcto!");
+      setMessageColor("green");
     } else {
       points > 1 ? setPoints(points - 1) : setPoints(0);
-      console.log("Incorrecto!");
+      setMessage("¡Incorrecto!");
+      setMessageColor("red");
     }
 
     if (count < 6) {
@@ -23,7 +26,6 @@ const Home = () => {
       isOpen(true); // Termina el juego
     }
   };
-
   const ResetBtn = () => {
     setPoints(7);
     setCount(0);
@@ -35,7 +37,7 @@ const Home = () => {
   return (
     <div className="h-screen w-full max-w-screen overflow-x-hidden bg-blue-400">
       {Open && <GameOverModal resetGame={ResetBtn} />}
-
+      <div style={{ color: messageColor }}>{message}</div>
       <header className="bg-blue-400 p-4 flex justify-between items-center">
         <img
           onClick={ResetBtn}
