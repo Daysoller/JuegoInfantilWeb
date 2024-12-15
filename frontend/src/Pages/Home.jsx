@@ -4,12 +4,14 @@ const Home = () => {
   const [points, setPoints] = useState(7);
   const [count, setCount] = useState(0);
   const [Open, isOpen] = useState(false);
-  const [message, setMessage] = useState("");
-  const [messageColor, setMessageColor] = useState("");
+  const [OpenMensaje, isOpenMensaje] = useState(false);
+  const [message, setMessage] = useState(null);
+  const [messageColor, setMessageColor] = useState(null);
 
   const [currentAnimal, setCurrentAnimal] = useState(null);
 
   const HandleClick = (clickedAnimal) => {
+    isOpenMensaje(true);
     if (clickedAnimal === currentAnimal) {
       setMessage("¡Correcto!");
       setMessageColor("green");
@@ -35,9 +37,18 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen w-full max-w-screen overflow-x-hidden bg-blue-400">
+    <div className="h-screen w-full max-w-screen overflow-x-hidden  bg-blue-400">
       {Open && <GameOverModal resetGame={ResetBtn} />}
-      <div style={{ color: messageColor }}>{message}</div>
+      {OpenMensaje && (
+        <div className="top-0 bg-left-top right-0 bottom-0 flex justify-center items-center">
+          <div
+            className="bg-sky-100 font-bold p-4 rounded-lg shadow-lg"
+            style={{ color: messageColor }}
+          >
+            {message}
+          </div>
+        </div>
+      )}
       <header className="bg-blue-400 p-4 flex justify-between items-center">
         <img
           onClick={ResetBtn}
@@ -45,6 +56,7 @@ const Home = () => {
           src="reset.png"
           alt="Reset"
         />
+
         <p className="text-lg sm:text-xl md:text-2xl text-yellow-200 font-medium">
           Bienvenido! <span className="text-violet-700 font-bold">Da clic</span>{" "}
           al animal correcto.
