@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 const Home = () => {
@@ -37,12 +38,12 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen w-full max-w-screen overflow-x-hidden  bg-blue-400">
+    <div className="w-full max-w-screen overflow-x-hidden  bg-blue-400">
       {Open && <GameOverModal resetGame={ResetBtn} />}
       {OpenMensaje && (
-        <div className="top-0 bg-left-top right-0 bottom-0 flex justify-center items-center">
+        <div className="fixed inset-0 flex justify-center">
           <div
-            className="bg-sky-100 font-bold p-4 rounded-lg shadow-lg"
+            className="bg-sky-100 font-bold p-4 w-32 h-14 rounded-lg shadow-lg text-center"
             style={{ color: messageColor }}
           >
             {message}
@@ -103,28 +104,24 @@ const AnimalGroup = ({ count, onCorrectAnimal, onClickAnimal, points }) => {
 
   const targetAnimal = animals[count % animals.length];
   onCorrectAnimal(targetAnimal.name);
-
   return (
-    <div>
-      <div className="flex bg-blue-200 p-4 rounded-lg shadow-md max-w-xs w-full sm:w-auto">
-        <div className="flex flex-wrap justify-center gap-4 sm:grid sm:gap-8 lg:flex lg:flex-row lg:gap-8 xl:flex xl:flex-row xl:gap-8">
-          <h2 className="text-yellow-600 font-bold text-lg sm:text-xl">
-            Haz click en el {targetAnimal.name}!
-          </h2>
-          {animals.map((animal, index) => (
-            <InteractiveBtn
-              key={index}
-              imageAnimal={animal.image}
-              soundAnimal={animal.sound}
-              onClick={() => onClickAnimal(animal.name)}
-            />
-          ))}
-        </div>
-
-        <p className="text-yellow-400 font-bold text-lg sm:text-2xl">
-          {points}/7
-        </p>
+    <div className="bg-blue-200 p-4 rounded-lg shadow-md w-full max-w-2xl">
+      <h2 className="text-center text-yellow-600 font-bold text-xl mb-4">
+        Haz click en el {targetAnimal.name}!
+      </h2>
+      <div className="grid grid-cols-2 gap-4 place-items-center">
+        {animals.map((animal, index) => (
+          <InteractiveBtn
+            key={index}
+            imageAnimal={animal.image}
+            soundAnimal={animal.sound}
+            onClick={() => onClickAnimal(animal.name)}
+          />
+        ))}
       </div>
+      <p className="mt-4 text-center text-yellow-400 font-bold text-xl">
+        {points}/7
+      </p>
     </div>
   );
 };
